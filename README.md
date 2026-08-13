@@ -14,44 +14,34 @@ The goal was to reduce repetitive steps and make the process faster and more eff
 
 The solution combines Google Sheets with a JavaScript userscript running through Tampermonkey.
 
-```text
-Google Sheets
-      │
-      │ Generates a personalized URL
-      ▼
-EBS Account Website
-      │
-      │ Tampermonkey reads URL parameters
-      ▼
-JavaScript Automation
-      │
-      ├── Fills Klantnummer
-      ├── Fills Aansluitnummer
-      ├── Selects the correct option
-      └── Clicks Submit
-      ▼
-Account information
+The workflow is:
+
+**Google Sheets → Personalized EBS link → Tampermonkey → Automatic form filling → Automatic submission**
+
+The script reads the customer information from the URL parameters and automatically fills the corresponding fields on the EBS website.
+
+It then submits the form automatically.
 
 ## 🛠️ Technologies Used
 
--  JavaScript 
--  Tampermonkey 
--  Google Sheets 
--  HTML DOM manipulation 
--  Browser automation 
--  Canva (for project documentation and screenshots) 
+- JavaScript
+- Tampermonkey
+- Google Sheets
+- HTML DOM manipulation
+- Browser automation
+- Canva for project documentation
 
 ## 💡 The Problem
 
 The original workflow required several manual steps for every account:
 
-1.  Copy the customer number. 
-2.  Copy the connection number. 
-3.  Open the EBS website. 
-4.  Paste the customer number. 
-5.  Paste the connection number. 
-6.  Select the correct option. 
-7.  Click Submit. 
+1. Copy the customer number.
+2. Copy the connection number.
+3. Open the EBS website.
+4. Paste the customer number.
+5. Paste the connection number.
+6. Select the correct option.
+7. Click Submit.
 
 When repeated several times, this became a repetitive process.
 
@@ -59,11 +49,7 @@ When repeated several times, this became a repetitive process.
 
 A dynamic link was created in Google Sheets for each account.
 
-The link passes the required information through URL parameters:
-
-```
-?klant=XXXXXXXX&aansluit=XXXXXXXXX
-```
+The link passes the required information through URL parameters.
 
 The Tampermonkey userscript reads these parameters and automatically fills the corresponding fields on the EBS website.
 
@@ -75,15 +61,15 @@ This reduces the original multi-step process to a single click from the spreadsh
 
 The final workflow is:
 
-**Google Sheets → Click "Open EBS" → Automatic form filling → Automatic submission**
+**Google Sheets → Click "Abrir EBS" → Automatic form filling → Automatic submission**
 
-The project significantly reduces repetitive manual data entry and demonstrates how a small automation can solve a real-world workflow problem.
+The project reduces repetitive manual data entry and demonstrates how a small automation can solve a real-world workflow problem.
 
 ## 🔒 Privacy
 
 No real customer information is included in this repository.
 
-Screenshots used for documentation should have sensitive information removed or obscured.
+Screenshots used for documentation have sensitive information removed or obscured.
 
 ## 📚 Learning Project
 
@@ -91,11 +77,6 @@ This project was created as a practical learning experience while developing my 
 
 It was especially useful for learning how JavaScript can interact with webpage elements and how browser automation can be applied to real-world tasks.
 
-## 👨‍💻 Author
-
-Danubio
-
-Learning programming, automation and IT through practical projects.
 ## 📸 Screenshots
 
 ### Google Sheets
@@ -106,15 +87,18 @@ The spreadsheet generates personalized links for each account.
 
 ### JavaScript / Tampermonkey
 
-The userscript automates the EBS form.
+The userscript handles the automatic form filling and submission.
 
 ![Tampermonkey](1786633410135.jpg)
 
 ### EBS Account Consultation
 
-The automation fills the required information and submits the form.
+The automation opens the EBS consultation page and fills the required information automatically.
 
 ![EBS](1786633410031.jpg)
 
-```
-```
+## 👨‍💻 Author
+
+Danubio
+
+Learning programming, automation and IT through practical projects.
