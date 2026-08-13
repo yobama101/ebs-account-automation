@@ -96,6 +96,25 @@ It was especially useful for learning how JavaScript can interact with webpage e
 Danubio
 
 Learning programming, automation and IT through practical projects.
+## 📸 Screenshots
+
+### Google Sheets
+
+The spreadsheet generates personalized links for each account.
+
+![Google Sheets](1786633409556.jpg)
+
+### JavaScript / Tampermonkey
+
+The userscript automates the EBS form.
+
+![Tampermonkey](1786633410135.jpg)
+
+### EBS Account Consultation
+
+The automation fills the required information and submits the form.
+
+![EBS](1786633410031.jpg)
 
 ```
 ```
